@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
+        "source": "P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_action_search.png",
+        "source": "P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_search.png"
+    },
+    {
+        "merged": "P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4\\ic_action_search.png",
+        "source": "P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_search.png"
+    }
+]
