@@ -25,8 +25,6 @@ public class FarkleDumbComputerPlayer extends GameComputerPlayer implements Fark
     private String validCombo; // score-able dice combo -- binary string
     private int validScore;
     private boolean diceChosen;
-    private boolean inProgress;
-
     // additions
     private String[] diceSelections = new String[64];
     private ArrayList<GameAction> myCurActionList;
@@ -44,12 +42,9 @@ public class FarkleDumbComputerPlayer extends GameComputerPlayer implements Fark
                 diceSelections[i] = "0"+diceSelections[i];
             }
         }
-        validScore = -1;
         validCombo = null;
-        inProgress = false;
         myCurActionList = new ArrayList<GameAction>();
     }
-
     /**
      * recieve game info and make move if it is the computer's turn
      * @param info game info to be interpreted if it is a FarkleState
@@ -62,7 +57,6 @@ public class FarkleDumbComputerPlayer extends GameComputerPlayer implements Fark
                 myCurActionList.clear();
                 return;
             }
-
             if(myCurActionList.size() == 0) {
                 int dieOutOfPlay = 0;
                 for (Die curDie: state.getDice()) {
@@ -71,7 +65,6 @@ public class FarkleDumbComputerPlayer extends GameComputerPlayer implements Fark
                     }
                 }
                 if (dieOutOfPlay == 6) {
-                //Log.i("computer", "rolling");
                     myCurActionList.add(new RollAction(this));
                 } else {
                     chooseDice();
@@ -82,7 +75,6 @@ public class FarkleDumbComputerPlayer extends GameComputerPlayer implements Fark
                         }
                     }
                     validCombo = null;
-                    validScore = -1;
                     diceChosen = false;
                     myCurActionList.add(new BankPointsAction(this));
                 }
@@ -99,10 +91,8 @@ public class FarkleDumbComputerPlayer extends GameComputerPlayer implements Fark
                 }
                 this.game.sendAction(curAction);
             }
-
         }
     }
-
     /**
      * save a valid combo and valid score to be used in making a move
      * @return true if new combo is picked
@@ -134,11 +124,9 @@ public class FarkleDumbComputerPlayer extends GameComputerPlayer implements Fark
         }
         return true;
     }
-
     /**
      * callback method: the timer ticked
      */
     protected void timerTicked() {
-
     }
 }
