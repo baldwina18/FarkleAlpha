@@ -75,44 +75,9 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
         // ignore the message if it's not a FarkleState message
         if (!(info instanceof FarkleState)) return;
 
-        // update our state; then update the display
+        // update our state
         this.myState = (FarkleState)info;
         updateDisplay();
-
-        // set the display
-        /*
-        if (info instanceof PigGameState) {
-            if (this.playerNum == 0) {
-                playerScoreTextView.setText("" +((PigGameState) info).getPlayer0Score());
-                oppScoreTextView.setText("" +((PigGameState) info).getPlayer1Score());
-            }
-            else {
-                playerScoreTextView.setText("" +((PigGameState) info).getPlayer1Score());
-                oppScoreTextView.setText("" +((PigGameState) info).getPlayer0Score());
-            }
-            turnTotalTextView.setText("" + ((PigGameState) info).getCurTotal());
-            int curVal = ((PigGameState) info).getCurDie();
-            if (curVal == 1) {
-                dieImageButton.setImageResource(R.drawable.face1);
-            } else if (curVal == 2) {
-                dieImageButton.setImageResource(R.drawable.face2);
-            }else if (curVal == 3) {
-                dieImageButton.setImageResource(R.drawable.face3);
-            }else if (curVal == 4) {
-                dieImageButton.setImageResource(R.drawable.face4);
-            }else if (curVal == 5) {
-                dieImageButton.setImageResource(R.drawable.face5);
-            }else if (curVal == 6) {
-                dieImageButton.setImageResource(R.drawable.face6);
-            }
-
-
-        }
-        else {
-            this.flash(0xFFFF80FF, 50);
-            return;
-        }*/
-
     }
 
     /**
@@ -173,8 +138,10 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
         // Checks for all image buttons
         else {
             for(int i=0; i<imageButtonId.length; i++) {
-                if(id == imageButtonId[i])
-                    action = new SelectDieAction(this,i);
+                if(id == imageButtonId[i]) {
+                    action = new SelectDieAction(this, i);
+                    break;
+                }
             }
         }
         if (action != null) {
@@ -186,14 +153,34 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
      * display the die using the image id's
      */
     public void displayDie() {
-
+        for(int i=0; i<6;i++) {
+            Die curDie = myState.getDice()[i];
+            if(!curDie.isInPlay()) {
+                diceButtons[i].setVisibility(View.INVISIBLE);
+            }
+            else {
+                diceButtons[i].setVisibility(View.VISIBLE);
+                if(curDie.isSelected()) {
+                    diceButtons[i].setImageResource(diceWhiteResID[curDie.getValue()-1]);
+                }
+                else {
+                    diceButtons[i].setImageResource(diceRedResID[curDie.getValue()-1]);
+                }
+            }
+        }
     }
 
     /**
      * set the display based on the current state
      */
     protected void updateDisplay() {
+        //update dice
+        displayDie();
 
+        //set scores & running total
+        p0scoreText.setText(myState.getPlayerScores()[0]+"");
+        p1scoreText.setText(myState.getPlayerScores()[1]+"");
+        runningTotalText.setText(myState.getRunningTotal()+"");
     }
 
 }

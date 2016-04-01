@@ -17,13 +17,17 @@ import android.util.Log;
 public class FarkleLocalGame extends LocalGame implements FarkleGame {
 	private FarkleState myFarkleGameState;
 
+	public FarkleLocalGame () {
+		myFarkleGameState = new FarkleState();
+	}
+
 	/**
 	 * send an updated version of the state to a given player
 	 * @param p which player to send the state to
 	 */
 	@Override
 	protected void sendUpdatedStateTo(GamePlayer p) {
-
+		p.sendInfo(new FarkleState(myFarkleGameState));
 	}
 
 
@@ -33,7 +37,7 @@ public class FarkleLocalGame extends LocalGame implements FarkleGame {
 	 */
 	@Override
 	protected boolean canMove(int playerIdx) {
-		return false;
+		return (myFarkleGameState.getCurrentPlayer() == playerIdx);
 	}
 
 	/**
@@ -42,6 +46,11 @@ public class FarkleLocalGame extends LocalGame implements FarkleGame {
 	 */
 	@Override
 	protected String checkIfGameOver() {
+		if (myFarkleGameState.getPlayerScores()[0] >= 10000) {
+			return this.playerNames[0] + " won with " + myFarkleGameState.getPlayerScores()[0] + " points! Yaaaaaay!";
+		} else if (myFarkleGameState.getPlayerScores()[1] >= 10000) {
+			return this.playerNames[1] + " won with " + myFarkleGameState.getPlayerScores()[1] + " points! Yaaaaaay!";
+		}
 		return null;
 	}
 
@@ -55,6 +64,19 @@ public class FarkleLocalGame extends LocalGame implements FarkleGame {
 	 */
 	@Override
 	protected boolean makeMove(GameAction action) {
-		return false;
+		if (action instanceof RollAction) {
+			myFarkleGameState.rollDice();
+			return true;
+		} else if (action instanceof BankPointsAction) {
+			myFarkleGameState.bankPoints();
+			return true;
+		} else if (action instanceof SelectDieAction) {
+			myFarkleGameState.selectDie(((SelectDieAction) action).getIdxOfDie());
+            Log.i("Idx: ",((SelectDieAction) action).getIdxOfDie()+"" );
+			return true;
+		} else {
+			return false;
+		}
+
 	}
 }// class FarkleLocalGame

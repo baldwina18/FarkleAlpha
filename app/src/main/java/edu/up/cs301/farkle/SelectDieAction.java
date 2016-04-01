@@ -24,6 +24,7 @@ public class SelectDieAction extends GameAction {
      */
     public SelectDieAction(GamePlayer player, int initIdx) {
         super(player);
+        idxOfDie = initIdx;
     }
 
     /* ---=== Accessor ===--- */
