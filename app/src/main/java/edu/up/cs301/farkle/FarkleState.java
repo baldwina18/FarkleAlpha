@@ -115,6 +115,7 @@ public class FarkleState extends GameState {
 		// all die are out of play -- means curPlayer can roll bc player has just changed
 		if (rollDiceIfOutOfPlay()) {
 			if (hasFarkle()) { farkle(); }
+            preselectRunningTotal = runningTotal; // added to fix scoring bug with rolling all 6 die -- should not be a problem, should be 0 anyway
 			return true;
 		}
 
@@ -137,6 +138,7 @@ public class FarkleState extends GameState {
 		// all die are out of play -- after selection occurs
 		if (rollDiceIfOutOfPlay()) {
 			if (hasFarkle()) { farkle(); }
+            preselectRunningTotal = runningTotal; // added to fix scoring bug with rolling all 6 die
 			return true;
 		}
 
