@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="P:\FarkleNew\Farkle-Design-master\Farkle\app\src\main\assets"/></dataSet><dataSet config="debug"><source path="P:\FarkleNew\Farkle-Design-master\Farkle\app\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/src/main/assets"/></dataSet><dataSet config="debug"><source path="/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/src/debug/assets"/></dataSet></merger>

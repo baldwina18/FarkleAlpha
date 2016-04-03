@@ -1,10 +1,14 @@
 [
     {
-        "merged": "P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\menu\\game_main.xml",
-        "source": "P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\src\\main\\res\\menu\\game_main.xml"
+        "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/build/intermediates/res/merged/debug/menu/game_main.xml",
+        "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/src/main/res/menu/game_main.xml"
     },
     {
-        "merged": "P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\menu\\game_main.xml",
-        "source": "P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\src\\main\\res\\menu\\game_main.xml"
+        "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\menu\\game_main.xml",
+        "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\src\\main\\res\\menu\\game_main.xml"
+    },
+    {
+        "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\menu\\game_main.xml",
+        "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\src\\main\\res\\menu\\game_main.xml"
     }
 ]
