@@ -1,5 +1,6 @@
 package edu.up.cs301.farkle;
 
+import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -26,7 +27,7 @@ import edu.up.cs301.game.R;
 public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickListener {
     /* ---=== Instance Variables ===--- */
     // text views
-    protected TextView p0scoreText, p1scoreText, runningTotalText;
+    protected TextView p0scoreText, p1scoreText, runningTotalText, playerOneText, playerTwoText;
 
     // buttons
     protected Button rollDiceButton, bankPointsButton;
@@ -96,6 +97,8 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
         p0scoreText = (TextView)activity.findViewById(R.id.p0CurrentScore);
         p1scoreText = (TextView)activity.findViewById(R.id.p1CurrentScore);
         runningTotalText = (TextView)activity.findViewById(R.id.bankScore);
+        playerOneText = (TextView)activity.findViewById(R.id.playerOneText);
+        playerTwoText = (TextView)activity.findViewById(R.id.playerTwoText);
 
         // buttons
         rollDiceButton = (Button)activity.findViewById(R.id.rollDiceButton);
@@ -176,6 +179,21 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
     protected void updateDisplay() {
         //update dice
         displayDie();
+
+        //indicate whose turn it is by highlighting their name
+        if (myState.getCurrentPlayer() == this.playerNum) {//player 1's turn
+            playerOneText.setTextColor(Color.BLACK);
+            playerOneText.setBackgroundColor(Color.WHITE);
+            playerTwoText.setTextColor(Color.WHITE);
+            playerTwoText.setBackgroundColor(Color.BLACK);
+        }
+        else{ //player 2's turn
+            playerTwoText.setTextColor(Color.BLACK);
+            playerTwoText.setBackgroundColor(Color.WHITE);
+            playerOneText.setTextColor(Color.WHITE);
+            playerOneText.setBackgroundColor(Color.BLACK);
+        }
+
 
         //set scores & running total
         p0scoreText.setText(myState.getPlayerScores()[0]+"");
