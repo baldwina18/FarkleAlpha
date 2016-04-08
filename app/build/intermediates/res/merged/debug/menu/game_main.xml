@@ -1,6 +1,59 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menu_settings"
-        android:title="@string/menu_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never" />
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+    android:id="@+id/score_guide"
+    android:title="Score Guide"
+    android:orderInCategory="100" />
+        <item
+
+    android:id="@+id/change_picture"
+    android:title="Change Your Picture"
+    android:orderInCategory="200">
+            <menu>
+                <item
+    android:id="@+id/girl"
+    android:orderInCategory="210"
+    android:title="Girl" />
+                <item
+    android:id="@+id/boyBlackHair"
+    android:orderInCategory="220"
+    android:title="Boy Black Hair" />
+                <item
+    android:id="@+id/boyRedHair"
+    android:orderInCategory="230"
+    android:title="Boy Red Hair" />
+                <item
+    android:id="@+id/dog"
+    android:orderInCategory="240"
+    android:title="Dog" />
+            </menu>
+        </item>
+        <item
+    android:id="@+id/change_other_picture"
+    android:title="Change Other Picture"
+    android:orderInCategory="300">
+            <menu>
+                <item
+    android:id="@+id/girl1"
+    android:orderInCategory="310"
+    android:title="Girl" />
+                <item
+    android:id="@+id/boyBlackHair1"
+    android:orderInCategory="320"
+    android:title="Boy Black Hair" />
+                <item
+    android:id="@+id/boyRedHair1"
+    android:orderInCategory="330"
+    android:title="Boy Red Hair" />
+                <item
+    android:id="@+id/dog1"
+    android:orderInCategory="340"
+    android:title="Dog" />
+            </menu>
+        </item>
+        <item
+    android:id="@+id/menu_settings"
+    android:title="Dice Style"
+    android:orderInCategory="400" />
 </menu>
+

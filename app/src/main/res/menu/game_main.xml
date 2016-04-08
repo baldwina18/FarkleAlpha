@@ -13,19 +13,19 @@
                 <item
     android:id="@+id/girl"
     android:orderInCategory="210"
-    android:title="Red" />
+    android:title="Girl" />
                 <item
     android:id="@+id/boyBlackHair"
     android:orderInCategory="220"
-    android:title="Blue" />
+    android:title="Boy Black Hair" />
                 <item
     android:id="@+id/boyRedHair"
     android:orderInCategory="230"
-    android:title="Blue" />
+    android:title="Boy Red Hair" />
                 <item
     android:id="@+id/dog"
     android:orderInCategory="240"
-    android:title="Yellow" />
+    android:title="Dog" />
             </menu>
         </item>
         <item
@@ -36,19 +36,19 @@
                 <item
     android:id="@+id/girl1"
     android:orderInCategory="310"
-    android:title="Red" />
+    android:title="Girl" />
                 <item
     android:id="@+id/boyBlackHair1"
     android:orderInCategory="320"
-    android:title="Blue" />
+    android:title="Boy Black Hair" />
                 <item
     android:id="@+id/boyRedHair1"
     android:orderInCategory="330"
-    android:title="Blue" />
+    android:title="Boy Red Hair" />
                 <item
     android:id="@+id/dog1"
     android:orderInCategory="340"
-    android:title="Yellow" />
+    android:title="Dog" />
             </menu>
         </item>
         <item

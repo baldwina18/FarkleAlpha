@@ -64,7 +64,10 @@ public class FarkleLocalGame extends LocalGame implements FarkleGame {
 	 */
 	@Override
 	protected boolean makeMove(GameAction action) {
-		if (action instanceof RollAction) {
+		if (action instanceof FarkleAction) {
+			myFarkleGameState.farkle();
+			return true;
+		} else if (action instanceof RollAction) {
 			myFarkleGameState.rollDice();
 			return true;
 		} else if (action instanceof BankPointsAction) {

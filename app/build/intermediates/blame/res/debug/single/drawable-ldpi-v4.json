@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_launcher.png",
+        "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+    },
+    {
         "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher.png",
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/src/main/res/drawable-ldpi/ic_launcher.png"
     },
@@ -8,7 +12,7 @@
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
     },
     {
-        "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_launcher.png",
-        "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+        "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher.png",
+        "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/src/main/res/drawable-ldpi/ic_launcher.png"
     }
 ]

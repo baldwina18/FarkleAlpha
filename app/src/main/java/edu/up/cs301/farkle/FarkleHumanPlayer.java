@@ -1,5 +1,6 @@
 package edu.up.cs301.farkle;
 
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import edu.up.cs301.game.Game;
 import edu.up.cs301.game.GameHumanPlayer;
 import edu.up.cs301.game.GameMainActivity;
 import edu.up.cs301.game.actionMsg.GameAction;
@@ -53,7 +55,8 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
     // game play variables
     private GameMainActivity myActivity;
     private FarkleState myState;
-    
+
+    private boolean flashFarkle;
     /**
      * constructor for a human player
      *
@@ -88,15 +91,19 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
         
         // update our state
         this.myState = (FarkleState)info;
-        
+        updateDisplay();
+
         if(myState.hasFarkle()) {
             farkleImage1.setVisibility(View.VISIBLE);
             farkleImage2.setVisibility(View.VISIBLE);
-            
-            
-            
+            updateDisplay();
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException iex) {
+                //do nothing
+            }
+            game.sendAction(new FarkleAction(this));
         }
-        updateDisplay();
     }
     
     /**
@@ -143,6 +150,9 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
         for(ImageButton ib : diceButtons) { ib.setOnClickListener(this); }
         rollDiceButton.setOnClickListener(this);
         bankPointsButton.setOnClickListener(this);
+
+        farkleImage1.setVisibility(View.INVISIBLE);
+        farkleImage2.setVisibility(View.INVISIBLE);
         
     }
     

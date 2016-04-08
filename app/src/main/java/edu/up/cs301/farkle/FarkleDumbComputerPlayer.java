@@ -54,8 +54,18 @@ public class FarkleDumbComputerPlayer extends GameComputerPlayer implements Fark
      */
     @Override
     protected void receiveInfo(GameInfo info) {
-        state = (FarkleState) info;
         if (info instanceof FarkleState) {
+            state = (FarkleState) info;
+            boolean diceInPlay = false;
+            for (Die d : state.getDice()) {
+                if (d.isInPlay()) {
+                    diceInPlay = true;
+                }
+            }
+            if (diceInPlay && state.hasFarkle()) {
+                game.sendAction(new FarkleAction(this));
+                return;
+            }
             if (((FarkleState) info).getCurrentPlayer() != this.playerNum) {
                 myCurActionList.clear();
                 validScore = 0;

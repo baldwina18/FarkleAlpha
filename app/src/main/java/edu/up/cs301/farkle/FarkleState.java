@@ -112,9 +112,12 @@ public class FarkleState extends GameState {
 	 * @return true if the roll was successful
 	 */
 	public boolean rollDice() {
+		if (hasFarkle()) {
+			farkle();
+		}
 		// all die are out of play -- means curPlayer can roll bc player has just changed
 		if (rollDiceIfOutOfPlay()) {
-			if (hasFarkle()) { farkle(); }
+			if (hasFarkle()) { runningTotal = 0;}
             preselectRunningTotal = runningTotal; // added to fix scoring bug with rolling all 6 die -- should not be a problem, should be 0 anyway
 			return true;
 		}
@@ -137,12 +140,12 @@ public class FarkleState extends GameState {
 
 		// all die are out of play -- after selection occurs
 		if (rollDiceIfOutOfPlay()) {
-			if (hasFarkle()) { farkle(); }
+			if (hasFarkle()) { runningTotal = 0;}
             preselectRunningTotal = runningTotal; // added to fix scoring bug with rolling all 6 die
 			return true;
 		}
 
-		if (hasFarkle()) { farkle(); }
+		if (hasFarkle()) { runningTotal = 0; }
 
 		preselectRunningTotal = runningTotal; // reset on action
 		return true;
@@ -164,6 +167,9 @@ public class FarkleState extends GameState {
 	 * @param idx index of selected die object
 	 */
 	public void selectDie(int idx) {
+		if (hasFarkle()) {
+			farkle();
+		}
 		dice[idx].setIsSelected(!dice[idx].isSelected());
 		if (noDieSelectedInCurrentTurn()) {
 			runningTotal = preselectRunningTotal;
@@ -260,6 +266,9 @@ public class FarkleState extends GameState {
 	 * @return true if the bank was successful
 	 */
 	public boolean bankPoints() {
+		if (hasFarkle()) {
+			farkle();
+		}
 		// determine if player is not allowed to bank points
 		// need to protect rolling -- something must be selected
 		boolean noneSelected = noDieSelectedInCurrentTurn();
