@@ -199,6 +199,8 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
         p0scoreText.setText(myState.getPlayerScores()[0]+"");
         p1scoreText.setText(myState.getPlayerScores()[1]+"");
         runningTotalText.setText(myState.getRunningTotal()+"");
+        playerOneText.setText(this.allPlayerNames[0]);
+        playerTwoText.setText(this.allPlayerNames[1]);
     }
 
 }
