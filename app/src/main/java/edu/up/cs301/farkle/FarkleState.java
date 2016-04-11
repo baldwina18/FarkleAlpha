@@ -112,7 +112,14 @@ public class FarkleState extends GameState {
 	 * @return true if the roll was successful
 	 */
 	public boolean rollDice() {
-		if (hasFarkle()) {
+		/*****************/
+		boolean diceInPlay = false;
+		for (Die d : dice) {
+			if (d.isInPlay()) {
+				diceInPlay = true;
+			}
+		}
+		if (diceInPlay && hasFarkle()) { /****************/
 			farkle();
 		}
 		// all die are out of play -- means curPlayer can roll bc player has just changed

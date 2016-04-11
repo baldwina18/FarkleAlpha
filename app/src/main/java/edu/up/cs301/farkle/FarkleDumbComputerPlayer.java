@@ -56,6 +56,15 @@ public class FarkleDumbComputerPlayer extends GameComputerPlayer implements Fark
     protected void receiveInfo(GameInfo info) {
         if (info instanceof FarkleState) {
             state = (FarkleState) info;
+
+            if (((FarkleState) info).getCurrentPlayer() != this.playerNum) {
+                myCurActionList.clear();
+                validScore = 0;
+                validCombo = null;
+                diceChosen = false;
+                return;
+            }
+
             boolean diceInPlay = false;
             for (Die d : state.getDice()) {
                 if (d.isInPlay()) {
@@ -66,13 +75,7 @@ public class FarkleDumbComputerPlayer extends GameComputerPlayer implements Fark
                 game.sendAction(new FarkleAction(this));
                 return;
             }
-            if (((FarkleState) info).getCurrentPlayer() != this.playerNum) {
-                myCurActionList.clear();
-                validScore = 0;
-                validCombo = null;
-                diceChosen = false;
-                return;
-            }
+
             
             if(myCurActionList.size() == 0) {
                 int dieOutOfPlay = 0;

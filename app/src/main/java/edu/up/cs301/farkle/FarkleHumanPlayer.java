@@ -86,19 +86,28 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
      */
     @Override
     public void receiveInfo(GameInfo info) {
+
         // ignore the message if it's not a FarkleState message
         if (!(info instanceof FarkleState)) return;
         
         // update our state
         this.myState = (FarkleState)info;
         updateDisplay();
+        farkleImage1.setVisibility(View.INVISIBLE);
+        farkleImage2.setVisibility(View.INVISIBLE);
 
-        if(myState.hasFarkle()) {
+        boolean diceInPlay = false;
+        for (Die d : myState.getDice()) {
+            if (d.isInPlay()) {
+                diceInPlay = true;
+            }
+        }
+        if (diceInPlay && myState.hasFarkle()) {
             farkleImage1.setVisibility(View.VISIBLE);
             farkleImage2.setVisibility(View.VISIBLE);
             updateDisplay();
             try {
-                Thread.sleep(5000);
+                Thread.sleep(2000);
             } catch (InterruptedException iex) {
                 //do nothing
             }

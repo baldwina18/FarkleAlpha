@@ -17,7 +17,7 @@ public class Die {
      * constructor for a single Die object
      */
     public Die () {
-        isInPlay = true;
+        isInPlay = false;
         isSelected = false;
         roll(); // initialize the value of the die
     }

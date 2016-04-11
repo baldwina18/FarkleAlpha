@@ -38,7 +38,7 @@ ADDED from /Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/src/main/Andr
 	android:label
 		ADDED from /Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/src/main/AndroidManifest.xml:15:9-41
 	android:icon
-		ADDED from /Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/src/main/AndroidManifest.xml:14:9-45
+		ADDED from /Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/src/main/AndroidManifest.xml:14:9-38
 	android:theme
 		ADDED from /Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/src/main/AndroidManifest.xml:16:9-40
 activity#edu.up.cs301.farkle.FarkleMainActivity
