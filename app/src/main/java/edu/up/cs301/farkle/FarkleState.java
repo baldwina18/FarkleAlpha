@@ -1,5 +1,7 @@
 package edu.up.cs301.farkle;
 
+import android.util.Log;
+
 import edu.up.cs301.game.infoMsg.GameState;
 /**
  * External Citation:
@@ -174,7 +176,13 @@ public class FarkleState extends GameState {
 	 * @param idx index of selected die object
 	 */
 	public void selectDie(int idx) {
-		if (hasFarkle()) {
+		boolean diceInPlay = false;
+		for (Die d : dice) {
+			if (d.isInPlay()) {
+				diceInPlay = true;
+			}
+		}
+		if (diceInPlay && hasFarkle()) {
 			farkle();
 		}
 		dice[idx].setIsSelected(!dice[idx].isSelected());
@@ -273,7 +281,14 @@ public class FarkleState extends GameState {
 	 * @return true if the bank was successful
 	 */
 	public boolean bankPoints() {
-		if (hasFarkle()) {
+		boolean diceInPlay = false;
+		for (Die d : dice) {
+			if (d.isInPlay()) {
+				diceInPlay = true;
+			}
+		}
+		if (diceInPlay && hasFarkle()) {
+			Log.i("i am here", "me");
 			farkle();
 		}
 		// determine if player is not allowed to bank points
