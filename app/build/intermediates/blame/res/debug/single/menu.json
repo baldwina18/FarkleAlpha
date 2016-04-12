@@ -8,6 +8,10 @@
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/src/main/res/menu/game_main.xml"
     },
     {
+        "merged": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/build/intermediates/res/merged/debug/menu/game_main.xml",
+        "source": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/src/main/res/menu/game_main.xml"
+    },
+    {
         "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\menu\\game_main.xml",
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\src\\main\\res\\menu\\game_main.xml"
     },

@@ -17,7 +17,7 @@ import edu.up.cs301.game.infoMsg.GameState;
  * @author Levi Banks
  * @author Sara Perkins
  * @author Briahna Santillana
- * @version 15 March 2016
+ * @version 10 April 2016
  */
 public class FarkleState extends GameState {
 	

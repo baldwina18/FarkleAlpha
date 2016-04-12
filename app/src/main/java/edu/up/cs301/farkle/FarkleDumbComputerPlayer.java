@@ -17,7 +17,7 @@ import edu.up.cs301.game.util.Tickable;
  * @author Levi Banks
  * @author Sara Perkins
  * @author Briahna Santillana
- * @version 22 March 2016
+ * @version 12 April 2016
  */
 public class FarkleDumbComputerPlayer extends GameComputerPlayer implements FarklePlayer, Tickable {
     /* ---=== Instance Variables ===---*/
@@ -57,6 +57,25 @@ public class FarkleDumbComputerPlayer extends GameComputerPlayer implements Fark
         if (info instanceof FarkleState) {
             state = (FarkleState) info;
 
+            // look for farkle
+            boolean diceInPlay = false;
+            for (Die d : state.getDice()) {
+                if (d.isInPlay()) {
+                    diceInPlay = true;
+                }
+            }
+            if (diceInPlay && state.hasFarkle()) {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException iex) {
+                }
+
+                if (state.getCurrentPlayer() == playerNum) {
+                    game.sendAction(new FarkleAction(this));
+                }
+                return;
+            }
+
             if (((FarkleState) info).getCurrentPlayer() != this.playerNum) {
                 myCurActionList.clear();
                 validScore = 0;
@@ -65,18 +84,7 @@ public class FarkleDumbComputerPlayer extends GameComputerPlayer implements Fark
                 return;
             }
 
-            boolean diceInPlay = false;
-            for (Die d : state.getDice()) {
-                if (d.isInPlay()) {
-                    diceInPlay = true;
-                }
-            }
-            if (diceInPlay && state.hasFarkle()) {
-                game.sendAction(new FarkleAction(this));
-                return;
-            }
-
-            
+            // queue up the actions
             if(myCurActionList.size() == 0) {
                 int dieOutOfPlay = 0;
                 for (Die curDie: state.getDice()) {

@@ -20,6 +20,14 @@
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/src/main/res/layout/game_remote_tab.xml"
     },
     {
+        "merged": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/build/intermediates/res/merged/debug/layout/farkle_human_player.xml",
+        "source": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/src/main/res/layout/farkle_human_player.xml"
+    },
+    {
+        "merged": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/build/intermediates/res/merged/debug/layout/game_config_main.xml",
+        "source": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/src/main/res/layout/game_config_main.xml"
+    },
+    {
         "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\layout\\game_player_list_row.xml",
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\FarkleNew\\Farkle-Design-master\\Farkle\\app\\src\\main\\res\\layout\\game_player_list_row.xml"
     },
@@ -40,12 +48,20 @@
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\src\\main\\res\\layout\\game_config_main.xml"
     },
     {
+        "merged": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/build/intermediates/res/merged/debug/layout/game_no_gui.xml",
+        "source": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/src/main/res/layout/game_no_gui.xml"
+    },
+    {
         "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/build/intermediates/res/merged/debug/layout/game_remote_tab.xml",
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/src/main/res/layout/game_remote_tab.xml"
     },
     {
         "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/build/intermediates/res/merged/debug/layout/game_config_main.xml",
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/src/main/res/layout/game_config_main.xml"
+    },
+    {
+        "merged": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/build/intermediates/res/merged/debug/layout/game_remote_tab.xml",
+        "source": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/src/main/res/layout/game_remote_tab.xml"
     },
     {
         "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/build/intermediates/res/merged/debug/layout/game_config_main.xml",
@@ -68,6 +84,10 @@
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\src\\main\\res\\layout\\game_remote_tab.xml"
     },
     {
+        "merged": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/build/intermediates/res/merged/debug/layout/game_player_list_row.xml",
+        "source": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/src/main/res/layout/game_player_list_row.xml"
+    },
+    {
         "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/build/intermediates/res/merged/debug/layout/game_local_tab.xml",
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/src/main/res/layout/game_local_tab.xml"
     },
@@ -84,8 +104,16 @@
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/src/main/res/layout/game_local_tab.xml"
     },
     {
+        "merged": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/build/intermediates/res/merged/debug/layout/game_config_tabhost.xml",
+        "source": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/src/main/res/layout/game_config_tabhost.xml"
+    },
+    {
         "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/build/intermediates/res/merged/debug/layout/game_config_tabhost.xml",
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/app/src/main/res/layout/game_config_tabhost.xml"
+    },
+    {
+        "merged": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/build/intermediates/res/merged/debug/layout/game_local_tab.xml",
+        "source": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/src/main/res/layout/game_local_tab.xml"
     },
     {
         "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha2/app/build/intermediates/res/merged/debug/layout/game_no_gui.xml",

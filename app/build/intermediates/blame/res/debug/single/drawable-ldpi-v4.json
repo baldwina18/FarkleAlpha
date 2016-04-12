@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher.png",
+        "source": "/Users/Sara/Desktop/farkle_alpha_github/FarkleAlpha/app/src/main/res/drawable-ldpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_launcher.png",
         "source": "/Users/levibanks/AndroidStudioProjects/FarkleAlpha/P:\\Users\\Sara\\Desktop\\oo_work\\Farkle\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
     },

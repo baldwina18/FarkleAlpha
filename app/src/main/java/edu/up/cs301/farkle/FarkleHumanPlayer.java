@@ -2,6 +2,7 @@ package edu.up.cs301.farkle;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -25,7 +26,7 @@ import edu.up.cs301.game.R;
  * @author Levi Banks
  * @author Sara Perkins
  * @author Briahna Santillana
- * @version 22 March 2016
+ * @version 12 April 2016
  */
 public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickListener {
     /* ---=== Instance Variables ===--- */
@@ -93,9 +94,8 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
         // update our state
         this.myState = (FarkleState)info;
         updateDisplay();
-        farkleImage1.setVisibility(View.INVISIBLE);
-        farkleImage2.setVisibility(View.INVISIBLE);
 
+        // check for a farkle in the current state
         boolean diceInPlay = false;
         for (Die d : myState.getDice()) {
             if (d.isInPlay()) {
@@ -105,13 +105,14 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
         if (diceInPlay && myState.hasFarkle()) {
             farkleImage1.setVisibility(View.VISIBLE);
             farkleImage2.setVisibility(View.VISIBLE);
+            farkleImage1.invalidate();
+            farkleImage2.invalidate();
             updateDisplay();
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException iex) {
-                //do nothing
+            getTimer().setInterval(1500);
+            getTimer().start();
+            if (myState.getCurrentPlayer() == playerNum) {
+                game.sendAction(new FarkleAction(this));
             }
-            game.sendAction(new FarkleAction(this));
         }
     }
     
@@ -223,6 +224,9 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
      * set the display based on the current state
      */
     protected void updateDisplay() {
+        farkleImage1.invalidate();
+        farkleImage2.invalidate();
+
         //update dice
         displayDie();
         
@@ -247,6 +251,25 @@ public class FarkleHumanPlayer extends GameHumanPlayer implements View.OnClickLi
         runningTotalText.setText(myState.getRunningTotal()+"");
         playerOneText.setText(this.allPlayerNames[0]);
         playerTwoText.setText(this.allPlayerNames[1]);
+    }
+
+    /**
+     * perform farkle signal at timer ticked
+     */
+    @Override
+    public void timerTicked() {
+        /**
+         * External Citation:
+         * Date: 	 12 April 2016
+         * Problem:  making the farkle signal show
+         * Resource: Nux
+         * Solution: Use use a timer and invalidate the views
+         */
+        farkleImage1.setVisibility(View.INVISIBLE);
+        farkleImage2.setVisibility(View.INVISIBLE);
+        farkleImage1.invalidate();
+        farkleImage2.invalidate();
+        getTimer().stop();
     }
     
     
